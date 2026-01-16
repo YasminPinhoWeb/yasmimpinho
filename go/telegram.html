@@ -2,13 +2,79 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=https://t.me/ayasmimpinho" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Redirecionando...</title>
+    <meta http-equiv="refresh" content="5; url=https://t.me/ayasmimpinho" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token":"59caaa57619b47deae706ad7f3af9c78"}'
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        color: #fff;
+        font-family: "Libre Baskerville", serif;
+        padding: 24px;
+      }
+
+      .loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        max-width: 320px;
+      }
+
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.25);
+        border-top-color: #fff;
+        animation: spin 1s linear infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .spinner {
+          animation-duration: 1.5s;
+        }
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>Redirecionando para Telegram...</p>
+    <div class="loader" role="status" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Redirecionando para Telegram...</p>
+    </div>
     <script>
-      window.location.replace("https://t.me/ayasmimpinho");
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          window.location.href = "https://t.me/ayasmimpinho";
+        }, 200);
+      });
     </script>
   </body>
 </html>
