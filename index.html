@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -213,6 +213,13 @@
         object-fit: contain;
       }
 
+      @media (min-width: 601px) {
+        .youtube-icon {
+          width: 58px;
+          height: 58px;
+        }
+      }
+
       /* ======================================================
          QUEBRAS
       ====================================================== */
@@ -296,6 +303,7 @@
         .title {
           top: 64px;
           padding: 0 2.5vw;
+          gap: 20px;
         }
 
         .title__subtitle {
@@ -327,13 +335,42 @@
         }
 
         .social-links {
-          margin-top: 32px;
-          gap: 32px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          gap: 5vw;
+          margin-top: 0;
+          width: 100%;
         }
 
         .social-links__item {
-          width: 72px;
-          height: 72px;
+          width: 12vw;
+          height: 12vw;
+          min-width: 12vw;
+          min-height: 12vw;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .social-links__icon {
+          width: 6vw;
+          height: 6vw;
+          min-width: 6vw;
+          min-height: 6vw;
+          object-fit: contain;
+          flex-shrink: 0;
+        }
+
+        .youtube-icon {
+          width: 7vw;
+          height: 7vw;
+          min-width: 7vw;
+          min-height: 7vw;
         }
       }
     </style>
@@ -370,8 +407,8 @@
           <span class="title__subtitle-secondary-note">
             Aqui você terá acesso a centenas de vídeos que vão muito
             <br class="br-mobile" />
-            além do sexo — tem afeto, intimidade, entrega…
-          </span><br />
+            além do sexo — tem afeto, intimidade, entrega… </span
+          ><br />
 
           <span class="title__subtitle-secondary-strong">
             mas claro que também adoro f*der igual uma p*ta.
@@ -379,11 +416,41 @@
         </span>
 
         <div class="link-buttons">
-          <a class="link-buttons__item" href="/go/instagram" target="_blank" rel="noopener noreferrer">INSTAGRAM - CONTA NOVA</a>
-          <a class="link-buttons__item" href="/go/onlyfans" target="_blank" rel="noopener noreferrer">FREE OF</a>
-          <a class="link-buttons__item" href="/go/privacy" target="_blank" rel="noopener noreferrer">CONTEÚDO EXCLUSIVO</a>
-          <a class="link-buttons__item" href="/go/telegram" target="_blank" rel="noopener noreferrer">CANAL DE NOVIDADES</a>
-          <a class="link-buttons__item" href="/go/contact" target="_blank" rel="noopener noreferrer">CONTATO PROFISSIONAL</a>
+          <a
+            class="link-buttons__item"
+            href="/go/instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            >INSTAGRAM - CONTA NOVA</a
+          >
+          <a
+            class="link-buttons__item"
+            href="/go/onlyfans"
+            target="_blank"
+            rel="noopener noreferrer"
+            >FREE OF</a
+          >
+          <a
+            class="link-buttons__item"
+            href="/go/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CONTEÚDO EXCLUSIVO</a
+          >
+          <a
+            class="link-buttons__item"
+            href="/go/telegram"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CANAL DE NOVIDADES</a
+          >
+          <a
+            class="link-buttons__item"
+            href="/go/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CONTATO PROFISSIONAL</a
+          >
         </div>
 
         <div class="social-links">
@@ -430,6 +497,30 @@
               alt="X"
               loading="lazy"
             />
+          </a>
+
+          <a
+            class="social-links__item"
+            href="/go/youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <svg
+              class="social-links__icon youtube-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.47C18.88 4 12 4 12 4s-6.88 0-8.6.47A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.53C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 0 0 1.94-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
+              />
+              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+            </svg>
           </a>
         </div>
       </div>
